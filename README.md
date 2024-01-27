@@ -2,6 +2,8 @@
 Lightweight Java OBS WebSocket controller.
 
 ## Quickstart
+Make sure to download the latest release and add it to your build path.
+
 ```java
 // Connect to the WebSocket
 OBSController controller = new OBSController().connect("ws://localhost:4444");
