@@ -1,5 +1,14 @@
-**/.DS_Store
-.checkstyle
-/target
-/.settings
-.classpath
+# Mac
+.DS_Store
+
+# Gradle
+.gradle
+build
+bin/
+.settings/
+
+# IDE
+.idea/
+
+# Java
+**/*.log
