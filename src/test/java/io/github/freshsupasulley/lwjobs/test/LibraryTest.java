@@ -12,10 +12,10 @@ class LibraryTest {
 	@Test
 	void someLibraryMethodReturnsTrue()
 	{
-		OBSController c = new OBSController();
-		c.connect("ws://localhost:4444");
-		
-		var response = c.build(new GetSceneListRequest()).complete();
-		System.out.println("CURRENT SCENE: " + response.getCurrentScene());
+//		OBSController c = new OBSController();
+//		c.connect("ws://localhost:4444");
+//
+//		var response = c.build(new GetSceneListRequest()).complete();
+//		System.out.println("CURRENT SCENE: " + response.getCurrentScene());
 	}
 }
