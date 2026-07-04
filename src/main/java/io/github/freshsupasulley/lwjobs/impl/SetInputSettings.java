@@ -2,22 +2,24 @@ package io.github.freshsupasulley.lwjobs.impl;
 
 import com.google.gson.JsonObject;
 import io.github.freshsupasulley.lwjobs.requests.EmptyGetResponse;
-import org.apache.http.NameValuePair;
+
+import java.util.Map;
 
 /**
  * incomplete cause I don't need overlay
  */
 public class SetInputSettings extends EmptyGetResponse {
 	
-	public SetInputSettings(String inputName, NameValuePair... inputSettings)
+	public SetInputSettings(String inputName, Map<String, String> inputSettings)
 	{
-		super(json -> {
+		super(json ->
+		{
 			JsonObject inputSettingsJSON = new JsonObject();
 			json.add("inputSettings", inputSettingsJSON);
 			
-			for(NameValuePair pair : inputSettings)
+			for(var pair : inputSettings.entrySet())
 			{
-				inputSettingsJSON.addProperty(pair.getName(), pair.getValue());
+				inputSettingsJSON.addProperty(pair.getKey(), pair.getValue());
 			}
 			
 			json.addProperty("inputName", inputName);
