@@ -19,11 +19,10 @@ dependencies {
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 }
 
-// Apply a specific Java toolchain to ease working on different environments.
+// Build against Java 21 while allowing any JDK 21 or newer to compile the project.
 java {
-    toolchain {
-        languageVersion = JavaLanguageVersion.of(21)
-    }
+    sourceCompatibility = JavaVersion.VERSION_21
+    targetCompatibility = JavaVersion.VERSION_21
 }
 
 tasks.named('test') {

@@ -10,5 +10,8 @@ bin/
 # IDE
 .idea/
 
+## AI
+.claude
+
 # Java
 **/*.log
